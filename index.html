@@ -35,6 +35,106 @@
             </div>
         </section>
         <section class="download-section">
+            <div class="flowchart-container">
+                <div class="step-box">
+                    <div class="icon">📂</div>
+                    <div class="step-title">1. Unzip</div>
+                    <div class="step-desc">Extract the folder</div>
+                </div>
+                
+                <div class="arrow">➜</div>
+                
+                <div class="step-box">
+                    <div class="icon">💻</div>
+                    <div class="step-title">2. Terminal</div>
+                    <div class="step-desc">Open in folder</div>
+                </div>
+                
+                <div class="arrow">➜</div>
+                
+                <div class="step-box">
+                    <div class="icon">⚙️</div>
+                    <div class="step-title">3. Backend</div>
+                    <div class="step-desc">python backend.py</div>
+                </div>
+                
+                <div class="arrow">➜</div>
+                
+                <div class="step-box">
+                    <div class="icon">🖥️</div>
+                    <div class="step-title">4. Frontend</div>
+                    <div class="step-desc">python frontend.py</div>
+                </div>
+            </div>
+            ```
+
+### Step 2: Update `style.css`
+Add this CSS to the bottom of your `style.css` file. This turns those `div` blocks into a nice horizontal diagram with arrows.
+
+```css
+/* Flowchart Styles */
+.flowchart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 30px 0;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.step-box {
+    text-align: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    width: 120px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.step-box:hover {
+    transform: translateY(-5px);
+    background: #eef2f5;
+}
+
+.icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.step-title {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.step-desc {
+    font-size: 0.8em;
+    color: #666;
+    font-family: monospace;
+    background: #eee;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+.arrow {
+    font-size: 1.5em;
+    color: #bdc3c7;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .flowchart-container {
+        flex-direction: column;
+    }
+    .arrow {
+        transform: rotate(90deg);
+    }
+}
             <h2>Try It Yourself</h2>
             <p>The project is open-source and available for download. You can run the Library System on your local machine.</p>
             
